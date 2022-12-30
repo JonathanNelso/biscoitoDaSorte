@@ -35,11 +35,12 @@ btnOpenAnother.addEventListener('click', toggleScreen)
 function openFortuneCookie() {
   toggleScreen()
   screen2.querySelector("p").innerText = phrases[randomNumber]
-
+  console.log(randomNumber)
 }
 
 function toggleScreen() {
-  randomNumber = Math.round(Math.random() * 19)
+  let mensagens = phrases.length
+  randomNumber = Math.floor(Math.random() * mensagens)
   screen1.classList.toggle("hidden")
   screen2.classList.toggle("hidden")
 }
